@@ -20,11 +20,11 @@
           {
             "position": {
               "x": 170,
-              "y": -5
+              "y": -50
             },
             "size": {
-              "width": 530,
-              "height": 370
+              "width": 550,
+              "height": 390
             },
             "visible": true,
             "shape": "trust-boundary-box",
@@ -37,12 +37,15 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "be9eb868-eed2-4ac8-8262-3c0abe2a524a"
+                "be9eb868-eed2-4ac8-8262-3c0abe2a524a",
+                "481644c6-6df5-468e-affd-a2eee3923a32",
+                "b44b7ac3-d542-42b3-b707-2a8b49858130"
               ],
               "containedElements": [
                 "175a06dc-d171-4dce-b030-9bb4e2c8c2f2",
                 "5e0304bd-654b-41e3-b277-cb95b9416500",
-                "4d5a3882-e3d4-46a0-b454-61c2e69f0d30"
+                "4d5a3882-e3d4-46a0-b454-61c2e69f0d30",
+                "e074b271-7db7-46df-abaf-1e97418e731f"
               ]
             }
           },
@@ -409,7 +412,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Validation Result (1.3)",
+              "name": "Actuation Signal (Lock/Unlock)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -420,24 +423,26 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "4ad7bc55-da87-408a-8318-22163993655d"
+              ]
             },
             "labels": [
-              "Validation Result (1.3)"
+              "Actuation Signal (Lock/Unlock)"
             ],
-            "id": "1c97534a-62d4-487d-bd07-47750417c3db",
+            "id": "481644c6-6df5-468e-affd-a2eee3923a32",
             "source": {
-              "x": 495,
-              "y": 165
+              "cell": "4d5a3882-e3d4-46a0-b454-61c2e69f0d30",
+              "port": "03cba8eb-5b49-429a-8f64-3a93bfa8e4ca"
             },
             "target": {
-              "x": 590,
-              "y": 80
+              "cell": "9560338f-5752-4aaf-b530-0652ef0a7e0c",
+              "port": "5bde84a4-a457-4779-8ef1-00fc61e73187"
             },
             "vertices": [
               {
-                "x": 590,
-                "y": 165
+                "x": 260,
+                "y": 30
               }
             ]
           },
@@ -461,7 +466,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Actuation Signal (Lock/Unlock)",
+              "name": "Validation Result (1.3)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -475,17 +480,23 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Actuation Signal (Lock/Unlock)"
+              "Validation Result (1.3)"
             ],
-            "id": "481644c6-6df5-468e-affd-a2eee3923a32",
+            "id": "1c97534a-62d4-487d-bd07-47750417c3db",
             "source": {
-              "x": 440,
-              "y": 30
+              "cell": "5e0304bd-654b-41e3-b277-cb95b9416500",
+              "port": "3fd09fc0-015e-4484-b947-4543b64e2cfd"
             },
             "target": {
-              "x": 540,
-              "y": 130
-            }
+              "cell": "4d5a3882-e3d4-46a0-b454-61c2e69f0d30",
+              "port": "d6815198-7de5-4900-ba5a-ea161d491955"
+            },
+            "vertices": [
+              {
+                "x": 620,
+                "y": 200
+              }
+            ]
           },
           {
             "position": {
@@ -613,8 +624,8 @@
           },
           {
             "position": {
-              "x": 560,
-              "y": 30
+              "x": 630,
+              "y": -20
             },
             "size": {
               "width": 60,
@@ -632,6 +643,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -715,7 +727,6 @@
               ]
             },
             "id": "4d5a3882-e3d4-46a0-b454-61c2e69f0d30",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Control Devices",
@@ -729,6 +740,178 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 470,
+              "y": 250
+            },
+            "size": {
+              "width": 90,
+              "height": 50
+            },
+            "attrs": {
+              "text": {
+                "text": "User Events"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "4b330df6-a7ef-49b8-82a4-d436e2bac2c8"
+                },
+                {
+                  "group": "right",
+                  "id": "a8979f35-9138-4f70-a59f-b4a665e6ba83"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7e38b758-6dc1-42de-a30c-d0831644bc78"
+                },
+                {
+                  "group": "left",
+                  "id": "91ed52f9-280b-4c62-a1e4-07d5112120cb"
+                }
+              ]
+            },
+            "id": "e074b271-7db7-46df-abaf-1e97418e731f",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Store",
+              "name": "User Events",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 14,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Event Logging",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "4ad7bc55-da87-408a-8318-22163993655d"
+              ]
+            },
+            "labels": [
+              "Event Logging"
+            ],
+            "id": "b44b7ac3-d542-42b3-b707-2a8b49858130",
+            "source": {
+              "x": 560,
+              "y": 60
+            },
+            "target": {
+              "cell": "e074b271-7db7-46df-abaf-1e97418e731f",
+              "port": "4b330df6-a7ef-49b8-82a4-d436e2bac2c8"
             }
           }
         ]

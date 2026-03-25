@@ -19,12 +19,12 @@
         "cells": [
           {
             "position": {
-              "x": 170,
-              "y": -50
+              "x": 169.99999999999875,
+              "y": -69.99999999999747
             },
             "size": {
-              "width": 550,
-              "height": 390
+              "width": 570,
+              "height": 500
             },
             "visible": true,
             "shape": "trust-boundary-box",
@@ -38,8 +38,7 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "be9eb868-eed2-4ac8-8262-3c0abe2a524a",
-                "481644c6-6df5-468e-affd-a2eee3923a32",
-                "b44b7ac3-d542-42b3-b707-2a8b49858130"
+                "481644c6-6df5-468e-affd-a2eee3923a32"
               ],
               "containedElements": [
                 "175a06dc-d171-4dce-b030-9bb4e2c8c2f2",
@@ -766,6 +765,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -849,7 +849,6 @@
               ]
             },
             "id": "e074b271-7db7-46df-abaf-1e97418e731f",
-            "zIndex": 13,
             "data": {
               "type": "tm.Store",
               "name": "User Events",
@@ -897,17 +896,15 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "4ad7bc55-da87-408a-8318-22163993655d"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "Event Logging"
             ],
             "id": "b44b7ac3-d542-42b3-b707-2a8b49858130",
             "source": {
-              "x": 560,
-              "y": 60
+              "cell": "4d5a3882-e3d4-46a0-b454-61c2e69f0d30",
+              "port": "43bfeba1-25de-4bb7-a7e9-a87ff9b28ab2"
             },
             "target": {
               "cell": "e074b271-7db7-46df-abaf-1e97418e731f",
